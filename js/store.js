@@ -1,4 +1,51 @@
 (function () {
+  const THEME_KEY = "rove_theme";
+  const themeRoot = document.documentElement;
+
+  const applyTheme = (theme) => {
+    themeRoot.setAttribute("data-theme", theme);
+    document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
+      const dark = theme === "dark";
+      button.setAttribute(
+        "aria-label",
+        dark ? "Switch to light mode" : "Switch to dark mode"
+      );
+      button.setAttribute("aria-pressed", String(dark));
+    });
+  };
+
+  const initTheme = () => {
+    let saved = null;
+    try {
+      saved = window.localStorage.getItem(THEME_KEY);
+    } catch (error) {}
+    if (saved !== "dark" && saved !== "light") {
+      saved =
+        window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+    }
+    applyTheme(saved);
+    document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const next =
+          themeRoot.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        applyTheme(next);
+        try {
+          window.localStorage.setItem(THEME_KEY, next);
+        } catch (error) {}
+      });
+    });
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initTheme);
+  } else {
+    initTheme();
+  }
+})();
+
+(function () {
   const CART_KEY = "rove_cart_v1";
   const ORDER_KEY = "rove_last_order";
   const TAX_RATE = 0.08;
@@ -96,15 +143,6 @@
       includes: "Textured dental chew toy",
       accent: "#b98a5a",
       desc: "Flexible ridges scrub teeth and massage gums while the chew urge gets a safe outlet."
-    },
-    pawmatch: {
-      id: "pawmatch",
-      name: "PawMatch",
-      tagline: "Handmade matching set",
-      price: 39,
-      includes: "Handmade matching set · one of one",
-      accent: "#9b6b8f",
-      desc: "A small-batch, handmade matching set for you and your dog — made one at a time, in your colours."
     }
   };
 

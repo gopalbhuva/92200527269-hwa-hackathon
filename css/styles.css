@@ -3888,3 +3888,1241 @@ select.input {
     width: 100%;
   }
 }
+
+/* ---------- Theme toggle ---------- */
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--ink);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.theme-icon {
+  grid-area: 1 / 1;
+  transition: opacity 0.2s, transform 0.3s var(--ease);
+}
+
+.theme-moon {
+  opacity: 0;
+  transform: rotate(-30deg) scale(0.6);
+}
+
+html[data-theme="dark"] .theme-sun {
+  opacity: 0;
+  transform: rotate(30deg) scale(0.6);
+}
+
+html[data-theme="dark"] .theme-moon {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- PawMatch tabs ---------- */
+.pm-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 34px;
+  padding-top: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.pm-tab {
+  margin-bottom: -1px;
+  padding: 12px 16px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 999px 999px 0 0;
+  background: transparent;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: rgba(20, 33, 26, 0.55);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.pm-tab:hover {
+  color: var(--ink);
+}
+
+.pm-tab.is-active {
+  border-bottom-color: var(--clay);
+  background: var(--cream-2);
+  color: var(--ink);
+}
+
+.pm-panel {
+  display: none;
+  padding-bottom: 20px;
+}
+
+.pm-panel.is-active {
+  display: block;
+  animation: fadeUp 0.5s var(--ease) both;
+}
+
+.pm-section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 48px 0 22px;
+}
+
+.pm-section-head h2 {
+  margin-top: 10px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.pm-section-head .lead {
+  max-width: 340px;
+  margin: 0;
+}
+
+/* ---------- Dog cards ---------- */
+.dog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.dog-result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.dog-card {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.dog-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(20, 33, 26, 0.28);
+  box-shadow: var(--shadow-md);
+}
+
+.dog-avatar {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--dog, var(--moss));
+  color: #fffdf8;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+}
+
+.dog-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.dog-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.dog-top h3 {
+  font-size: 1.2rem;
+}
+
+.dog-match {
+  flex: none;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--cream-2);
+  color: var(--moss);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.dog-meta {
+  margin-top: 4px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: rgba(20, 33, 26, 0.5);
+}
+
+.dog-blurb {
+  margin-top: 10px;
+  font-size: 0.86rem;
+  color: rgba(20, 33, 26, 0.68);
+}
+
+.dog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.dog-tag {
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--cream-2);
+  font-size: 0.64rem;
+  font-weight: 800;
+  color: var(--moss);
+}
+
+.dog-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.dog-days {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(20, 33, 26, 0.5);
+}
+
+.dog-card.is-best {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--cream);
+}
+
+.dog-card.is-best .dog-meta,
+.dog-card.is-best .dog-blurb,
+.dog-card.is-best .dog-days {
+  color: rgba(248, 244, 234, 0.7);
+}
+
+.dog-card.is-best .dog-tag {
+  background: rgba(248, 244, 234, 0.12);
+  color: var(--cream);
+}
+
+.dog-card.is-best .dog-match {
+  background: rgba(248, 244, 234, 0.14);
+  color: var(--sage);
+}
+
+.dog-card.is-best .btn-ghost {
+  color: var(--cream);
+  border-color: rgba(248, 244, 234, 0.4);
+}
+
+/* ---------- Adoption form ---------- */
+.adopt-card {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 48px;
+  margin-top: 56px;
+  padding: 38px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.adopt-copy h2 {
+  margin: 10px 0 12px;
+}
+
+.adopt-copy p {
+  color: rgba(20, 33, 26, 0.68);
+}
+
+.adopt-form {
+  align-self: center;
+}
+
+.adopt-form .form-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.adopt-form .btn {
+  margin-top: 18px;
+}
+
+.field-hint {
+  font-weight: 600;
+  color: rgba(20, 33, 26, 0.4);
+}
+
+.adopt-status {
+  min-height: 1.2em;
+  margin-top: 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.adopt-status.is-success {
+  color: var(--moss);
+}
+
+.adopt-status.is-error {
+  color: var(--danger);
+}
+
+/* ---------- Checklist ---------- */
+.check-card {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.check-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+.check-count {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--moss);
+}
+
+.check-top .ship-meter-bar {
+  width: min(320px, 60vw);
+}
+
+.check-weeks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 40px;
+}
+
+.check-week h3 {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.check-item input {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin-top: 4px;
+  accent-color: var(--moss);
+}
+
+.check-item input:checked + span {
+  color: rgba(20, 33, 26, 0.4);
+  text-decoration: line-through;
+}
+
+/* ---------- Shelter toolkit ---------- */
+.tool-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.tool-card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.tool-card h3 {
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+}
+
+.tool-note {
+  margin-bottom: 18px;
+  font-size: 0.82rem;
+  color: rgba(20, 33, 26, 0.6);
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.chip-check {
+  position: relative;
+}
+
+.chip-check input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.chip-check span {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--cream);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.chip-check input:checked + span {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--cream);
+}
+
+.chip-check input:focus-visible + span {
+  outline: 2px solid var(--clay);
+  outline-offset: 2px;
+}
+
+.bio-output {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 16px;
+  background: var(--cream);
+  font-size: 0.9rem;
+}
+
+.bio-output:empty {
+  display: none;
+}
+
+.tool-card .link-btn {
+  margin-top: 12px;
+}
+
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chart-summary {
+  margin-bottom: 6px;
+  font-size: 0.82rem;
+  color: rgba(20, 33, 26, 0.65);
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 44px 74px;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.76rem;
+}
+
+.bar-name {
+  overflow: hidden;
+  font-weight: 800;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bar-track {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--cream-2);
+}
+
+.bar-track span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+}
+
+.bar-long {
+  background: var(--clay);
+}
+
+.bar-short {
+  background: var(--moss-2);
+}
+
+.bar-days {
+  font-weight: 700;
+  text-align: right;
+  color: rgba(20, 33, 26, 0.6);
+}
+
+.bar-tag {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--clay);
+  white-space: nowrap;
+}
+
+.bar-tag-empty {
+  visibility: hidden;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 18px;
+  margin-top: 16px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(20, 33, 26, 0.55);
+}
+
+.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 6px;
+  border-radius: 50%;
+}
+
+.dot-long {
+  background: var(--clay);
+}
+
+.dot-short {
+  background: var(--moss-2);
+}
+
+/* ---------- Mood reader ---------- */
+.mood-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.mood-card .form-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.mood-result {
+  display: none;
+}
+
+.mood-result.has-result {
+  display: block;
+  align-self: center;
+  padding: 24px;
+  border-radius: 18px;
+  background: var(--cream);
+}
+
+.mood-result h3 {
+  margin: 8px 0 10px;
+  font-family: var(--serif);
+  font-size: 1.6rem;
+}
+
+.mood-result p {
+  font-size: 0.9rem;
+  color: rgba(20, 33, 26, 0.7);
+}
+
+.mood-tip {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.mood-tip strong {
+  color: var(--ink);
+}
+
+@media (max-width: 1080px) {
+  .dog-result-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 940px) {
+  .dog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adopt-card,
+  .tool-grid,
+  .mood-card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .check-weeks {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .pm-tabs {
+    gap: 4px;
+  }
+
+  .pm-tab {
+    padding: 10px 12px;
+    font-size: 0.76rem;
+  }
+
+  .pm-section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 36px;
+  }
+
+  .dog-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adopt-card,
+  .tool-card,
+  .check-card,
+  .mood-card {
+    padding: 22px;
+  }
+
+  .adopt-form .form-grid,
+  .mood-card .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bar-row {
+    grid-template-columns: 56px 1fr 38px;
+  }
+
+  .bar-tag {
+    display: none;
+  }
+}
+
+/* ---------- Dark mode ---------- */
+html[data-theme="dark"] {
+  --ink: #eef2ea;
+  --ink-2: #dbe4d8;
+  --moss: #b7c4ad;
+  --moss-2: #9fb596;
+  --sage: #8fa886;
+  --cream: #0f1712;
+  --cream-2: #16211a;
+  --bone: #2a382f;
+  --clay: #d68a63;
+  --clay-2: #c97750;
+  --gold: #d8b578;
+  --white: #131d16;
+  --line: rgba(238, 242, 234, 0.14);
+  --line-strong: rgba(238, 242, 234, 0.3);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 24px 60px -28px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 40px 100px -40px rgba(0, 0, 0, 0.7);
+}
+
+html[data-theme="dark"] .site-header {
+  background: rgba(15, 23, 18, 0.86);
+}
+
+html[data-theme="dark"] .announce {
+  background: #070c09;
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .main-nav a {
+  color: rgba(238, 242, 234, 0.72);
+}
+
+html[data-theme="dark"] .main-nav a:hover {
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .main-nav a::after {
+  background: #eef2ea;
+}
+
+html[data-theme="dark"] .cart-link,
+html[data-theme="dark"] .theme-toggle {
+  background: var(--white);
+  border-color: var(--line);
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .mobile-menu {
+  background: var(--cream);
+}
+
+html[data-theme="dark"] .site-footer {
+  background: #0a120d;
+  color: #eef2ea;
+  border-top-color: rgba(238, 242, 234, 0.08);
+}
+
+html[data-theme="dark"] .footer-col a,
+html[data-theme="dark"] .footer-brand p {
+  color: rgba(238, 242, 234, 0.72);
+}
+
+html[data-theme="dark"] .footer-col a:hover {
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .footer-col h4 {
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .footer-bottom {
+  color: rgba(238, 242, 234, 0.55);
+}
+
+html[data-theme="dark"] .brand-light .brand-mark {
+  border-color: #eef2ea;
+}
+
+html[data-theme="dark"] .brand-light .brand-mark::after {
+  background: #eef2ea;
+}
+
+html[data-theme="dark"] .cta-band {
+  background: #16211a;
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .cta-band h2,
+html[data-theme="dark"] .cta-band p {
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .cta-band .btn-ghost {
+  color: #eef2ea !important;
+  border-color: rgba(238, 242, 234, 0.4) !important;
+}
+
+html[data-theme="dark"] .page-hero p,
+html[data-theme="dark"] .quiz-help,
+html[data-theme="dark"] .quiz-option-note,
+html[data-theme="dark"] .dog-meta,
+html[data-theme="dark"] .dog-blurb,
+html[data-theme="dark"] .dog-days,
+html[data-theme="dark"] .tool-note,
+html[data-theme="dark"] .adopt-copy p,
+html[data-theme="dark"] .chart-summary,
+html[data-theme="dark"] .bar-days,
+html[data-theme="dark"] .chart-legend,
+html[data-theme="dark"] .mood-result p,
+html[data-theme="dark"] .option-label,
+html[data-theme="dark"] .option-label span,
+html[data-theme="dark"] .field label .opt,
+html[data-theme="dark"] .field-hint,
+html[data-theme="dark"] .link-btn {
+  color: rgba(238, 242, 234, 0.66);
+}
+
+html[data-theme="dark"] .input::placeholder {
+  color: rgba(238, 242, 234, 0.4);
+}
+
+html[data-theme="dark"] .quiz-option {
+  background: var(--cream-2);
+}
+
+html[data-theme="dark"] .quiz-option:hover {
+  background: var(--white);
+}
+
+html[data-theme="dark"] .dog-card.is-best {
+  background: #16211a;
+  border-color: #22352a;
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .dog-card.is-best .dog-meta,
+html[data-theme="dark"] .dog-card.is-best .dog-blurb,
+html[data-theme="dark"] .dog-card.is-best .dog-days {
+  color: rgba(238, 242, 234, 0.7);
+}
+
+html[data-theme="dark"] .dog-card.is-best .dog-tag {
+  background: rgba(238, 242, 234, 0.12);
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .dog-card.is-best .dog-match {
+  background: rgba(238, 242, 234, 0.14);
+  color: var(--sage);
+}
+
+html[data-theme="dark"] .dog-card.is-best .btn-ghost {
+  color: #eef2ea;
+  border-color: rgba(238, 242, 234, 0.4);
+}
+
+html[data-theme="dark"] .dog-match,
+html[data-theme="dark"] .dog-tag {
+  background: var(--cream-2);
+  color: var(--sage);
+}
+
+html[data-theme="dark"] .chip-check span {
+  background: var(--cream-2);
+}
+
+html[data-theme="dark"] .chip-check input:checked + span {
+  background: #eef2ea;
+  border-color: #eef2ea;
+  color: #0f1712;
+}
+
+html[data-theme="dark"] .check-item input:checked + span {
+  color: rgba(238, 242, 234, 0.42);
+}
+
+html[data-theme="dark"] .mood-tip strong {
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .theme-toggle:hover {
+  border-color: #eef2ea;
+}
+
+/* ---------- Dark mode: whole site ---------- */
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html[data-theme="dark"] ::selection {
+  color: #fffdf8;
+}
+
+html[data-theme="dark"] .btn-clay,
+html[data-theme="dark"] .cart-count,
+html[data-theme="dark"] .price-badge {
+  color: #fffdf8;
+}
+
+html[data-theme="dark"] .btn-light {
+  background: #eef2ea;
+  color: #0f1712;
+}
+
+html[data-theme="dark"] .btn-light:hover {
+  background: #ffffff;
+}
+
+html[data-theme="dark"] .toast {
+  background: #16211a;
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .toast a {
+  color: var(--sage);
+}
+
+html[data-theme="dark"] .marquee {
+  background: #0a120d;
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .difficulty {
+  background: #0a120d;
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .difficulty h2 {
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .difficulty .lead {
+  color: rgba(238, 242, 234, 0.78);
+}
+
+html[data-theme="dark"] .level-tab {
+  border-color: rgba(238, 242, 234, 0.16);
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .level-tab:hover {
+  border-color: rgba(238, 242, 234, 0.4);
+}
+
+html[data-theme="dark"] .level-tab.is-active {
+  background: #eef2ea;
+  border-color: #eef2ea;
+  color: #0f1712;
+}
+
+html[data-theme="dark"] .level-tab.is-active .level-num {
+  border-color: var(--clay);
+  color: var(--clay-2);
+}
+
+html[data-theme="dark"] .level-stat strong {
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .level-stat span {
+  color: rgba(238, 242, 234, 0.62);
+}
+
+html[data-theme="dark"] .level-caption {
+  background: rgba(15, 23, 18, 0.9);
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .level-visual {
+  border-color: rgba(238, 242, 234, 0.14);
+}
+
+html[data-theme="dark"] .price-card.featured {
+  background: #16211a;
+  border-color: #22352a;
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .price-card.featured .price-kicker {
+  color: var(--sage);
+}
+
+html[data-theme="dark"] .price-card.featured .price-desc {
+  color: rgba(238, 242, 234, 0.7);
+}
+
+html[data-theme="dark"] .price-card.featured .price-list {
+  border-color: rgba(238, 242, 234, 0.16);
+}
+
+html[data-theme="dark"] .price-card.featured .price-list svg {
+  color: var(--sage);
+}
+
+html[data-theme="dark"] .shop-card.featured {
+  background: #16211a;
+  border-color: #22352a;
+  color: #eef2ea;
+}
+
+html[data-theme="dark"] .shop-card.featured .shop-media {
+  background: rgba(238, 242, 234, 0.06);
+  color: var(--sage);
+}
+
+html[data-theme="dark"] .shop-card.featured .shop-desc {
+  color: rgba(238, 242, 234, 0.7);
+}
+
+html[data-theme="dark"] .shop-card.featured .shop-price {
+  color: var(--sage);
+}
+
+html[data-theme="dark"] .shop-card.featured .shop-tag {
+  background: var(--clay);
+  color: #fffdf8;
+}
+
+/* ---------- Dark mode: muted text ---------- */
+html[data-theme="dark"] .muted {
+  color: rgba(238, 242, 234, 0.77);
+}
+
+html[data-theme="dark"] .main-nav a {
+  color: rgba(238, 242, 234, 0.85);
+}
+
+html[data-theme="dark"] .hero-sub {
+  color: rgba(238, 242, 234, 0.84);
+}
+
+html[data-theme="dark"] .hero-stat {
+  color: rgba(238, 242, 234, 0.82);
+}
+
+html[data-theme="dark"] .problem-item p {
+  color: rgba(238, 242, 234, 0.8);
+}
+
+html[data-theme="dark"] .feature-card p {
+  color: rgba(238, 242, 234, 0.8);
+}
+
+html[data-theme="dark"] .step p {
+  color: rgba(238, 242, 234, 0.8);
+}
+
+html[data-theme="dark"] .rating-meta {
+  color: rgba(238, 242, 234, 0.72);
+}
+
+html[data-theme="dark"] .review-dog {
+  color: rgba(238, 242, 234, 0.7);
+}
+
+html[data-theme="dark"] .price-desc {
+  color: rgba(238, 242, 234, 0.78);
+}
+
+html[data-theme="dark"] .guarantee span {
+  color: rgba(238, 242, 234, 0.72);
+}
+
+html[data-theme="dark"] .acc-inner {
+  color: rgba(238, 242, 234, 0.82);
+}
+
+html[data-theme="dark"] .page-hero p {
+  color: rgba(238, 242, 234, 0.8);
+}
+
+html[data-theme="dark"] .breadcrumb {
+  color: rgba(238, 242, 234, 0.62);
+}
+
+html[data-theme="dark"] .gallery-note {
+  color: rgba(238, 242, 234, 0.62);
+}
+
+html[data-theme="dark"] .rating-line {
+  color: rgba(238, 242, 234, 0.72);
+}
+
+html[data-theme="dark"] .product-price-note {
+  color: rgba(238, 242, 234, 0.62);
+}
+
+html[data-theme="dark"] .product-desc {
+  color: rgba(238, 242, 234, 0.82);
+}
+
+html[data-theme="dark"] .option-label {
+  color: rgba(238, 242, 234, 0.67);
+}
+
+html[data-theme="dark"] .option-label span {
+  color: rgba(238, 242, 234, 0.57);
+}
+
+html[data-theme="dark"] .option-sub {
+  color: rgba(238, 242, 234, 0.67);
+}
+
+html[data-theme="dark"] .product-perk {
+  color: rgba(238, 242, 234, 0.77);
+}
+
+html[data-theme="dark"] .spec span {
+  color: rgba(238, 242, 234, 0.57);
+}
+
+html[data-theme="dark"] .cart-item-sub {
+  color: rgba(238, 242, 234, 0.67);
+}
+
+html[data-theme="dark"] .link-btn {
+  color: rgba(238, 242, 234, 0.62);
+}
+
+html[data-theme="dark"] .summary-row {
+  color: rgba(238, 242, 234, 0.82);
+}
+
+html[data-theme="dark"] .secure-note {
+  color: rgba(238, 242, 234, 0.57);
+}
+
+html[data-theme="dark"] .ship-meter p {
+  color: rgba(238, 242, 234, 0.67);
+}
+
+html[data-theme="dark"] .empty-state p {
+  color: rgba(238, 242, 234, 0.72);
+}
+
+html[data-theme="dark"] .checkout-steps {
+  color: rgba(238, 242, 234, 0.47);
+}
+
+html[data-theme="dark"] .field label .opt {
+  color: rgba(238, 242, 234, 0.52);
+}
+
+html[data-theme="dark"] .input::placeholder {
+  color: rgba(238, 242, 234, 0.46);
+}
+
+html[data-theme="dark"] .test-card-row {
+  color: rgba(238, 242, 234, 0.72);
+}
+
+html[data-theme="dark"] .mini-item-sub {
+  color: rgba(238, 242, 234, 0.62);
+}
+
+html[data-theme="dark"] .demo-note {
+  color: rgba(238, 242, 234, 0.72);
+}
+
+html[data-theme="dark"] .confirm-hero p {
+  color: rgba(238, 242, 234, 0.77);
+}
+
+html[data-theme="dark"] .order-number span {
+  color: rgba(238, 242, 234, 0.57);
+}
+
+html[data-theme="dark"] .detail-row span {
+  color: rgba(238, 242, 234, 0.54);
+}
+
+html[data-theme="dark"] .detail-row p {
+  color: rgba(238, 242, 234, 0.82);
+}
+
+html[data-theme="dark"] .next-step p {
+  color: rgba(238, 242, 234, 0.72);
+}
+
+html[data-theme="dark"] .contact-card span {
+  color: rgba(238, 242, 234, 0.54);
+}
+
+html[data-theme="dark"] .contact-card p {
+  color: rgba(238, 242, 234, 0.72);
+}
+
+html[data-theme="dark"] .contact-form > p {
+  color: rgba(238, 242, 234, 0.72);
+}
+
+html[data-theme="dark"] .success-panel p {
+  color: rgba(238, 242, 234, 0.74);
+}
+
+html[data-theme="dark"] .not-found p {
+  color: rgba(238, 242, 234, 0.74);
+}
+
+html[data-theme="dark"] .shop-count {
+  color: rgba(238, 242, 234, 0.62);
+}
+
+html[data-theme="dark"] .shop-desc {
+  color: rgba(238, 242, 234, 0.8);
+}
+
+html[data-theme="dark"] .pm-meta {
+  color: rgba(238, 242, 234, 0.67);
+}
+
+html[data-theme="dark"] .pm-quiz-head p {
+  color: rgba(238, 242, 234, 0.8);
+}
+
+html[data-theme="dark"] .quiz-help {
+  color: rgba(238, 242, 234, 0.74);
+}
+
+html[data-theme="dark"] .quiz-option-note {
+  color: rgba(238, 242, 234, 0.67);
+}
+
+html[data-theme="dark"] .quiz-result p {
+  color: rgba(238, 242, 234, 0.77);
+}
+
+html[data-theme="dark"] .quiz-pm-callout p {
+  color: rgba(238, 242, 234, 0.77);
+}
+
+html[data-theme="dark"] .pm-price-note {
+  color: rgba(238, 242, 234, 0.62);
+}
+
+html[data-theme="dark"] .pm-product-copy > p {
+  color: rgba(238, 242, 234, 0.8);
+}
+
+html[data-theme="dark"] .pm-tab {
+  color: rgba(238, 242, 234, 0.67);
+}
+
+html[data-theme="dark"] .dog-meta {
+  color: rgba(238, 242, 234, 0.62);
+}
+
+html[data-theme="dark"] .dog-blurb {
+  color: rgba(238, 242, 234, 0.8);
+}
+
+html[data-theme="dark"] .dog-days {
+  color: rgba(238, 242, 234, 0.62);
+}
+
+html[data-theme="dark"] .adopt-copy p {
+  color: rgba(238, 242, 234, 0.8);
+}
+
+html[data-theme="dark"] .field-hint {
+  color: rgba(238, 242, 234, 0.52);
+}
+
+html[data-theme="dark"] .check-item input:checked + span {
+  color: rgba(238, 242, 234, 0.52);
+}
+
+html[data-theme="dark"] .tool-note {
+  color: rgba(238, 242, 234, 0.72);
+}
+
+html[data-theme="dark"] .chart-summary {
+  color: rgba(238, 242, 234, 0.77);
+}
+
+html[data-theme="dark"] .bar-days {
+  color: rgba(238, 242, 234, 0.72);
+}
+
+html[data-theme="dark"] .chart-legend {
+  color: rgba(238, 242, 234, 0.67);
+}
+
+html[data-theme="dark"] .mood-result p {
+  color: rgba(238, 242, 234, 0.82);
+}
+

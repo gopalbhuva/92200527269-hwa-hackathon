@@ -8,8 +8,7 @@ const CATALOG = {
   "trail-harness": { name: "The Trail Harness", price: 54, accent: "#3f5d4a" },
   "cool-mat": { name: "The Cool Mat", price: 64, accent: "#5b7f8a" },
   "treat-pouch": { name: "The Treat Pouch", price: 32, accent: "#a85a37" },
-  "dental-chew": { name: "The Dental Chew", price: 16, accent: "#b98a5a" },
-  pawmatch: { name: "PawMatch", price: 39, accent: "#9b6b8f" }
+  "dental-chew": { name: "The Dental Chew", price: 16, accent: "#b98a5a" }
 };
 
 const COLORS = {

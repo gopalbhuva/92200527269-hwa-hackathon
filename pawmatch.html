@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PawMatch — find the right fit | ROVE</title>
-  <meta name="description" content="PawMatch is a handmade matching set for you and your dog, plus a four-question quiz that builds a shortlist of ROVE pieces that actually fit your dog.">
-  <meta property="og:title" content="PawMatch — find the right fit">
-  <meta property="og:description" content="A handmade matching set for you and your dog, and a quick quiz that matches your dog with the right enrichment.">
+  <title>PawMatch — adoption, matched | ROVE</title>
+  <meta name="description" content="PawMatch ranks shelter dogs by how well they fit your home and lifestyle. Four questions, real adoption requests, a 30-day checklist, a shelter bio writer and a dog mood reader.">
+  <meta property="og:title" content="PawMatch — adoption, matched">
+  <meta property="og:description" content="Four questions. Real shelter dogs. A shortlist ranked by how well they fit your life.">
   <meta property="og:type" content="website">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>try{var t=localStorage.getItem("rove_theme");if(t!=="dark"&&t!=="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -33,6 +34,10 @@
         <a href="/contact.html">Contact</a>
       </nav>
       <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+          <svg class="theme-icon theme-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <svg class="theme-icon theme-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </button>
         <a class="cart-link" href="/cart.html" aria-label="Shopping cart">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           <span class="cart-count" data-cart-count>0</span>
@@ -50,34 +55,35 @@
     <a href="/index.html#reviews">Reviews</a>
     <a href="/faqs.html">FAQs</a>
     <a href="/contact.html">Contact</a>
-    <a class="btn btn-primary btn-block" href="#quiz">Find your match</a>
+    <a class="btn btn-primary btn-block" href="#match-quiz">Find your match</a>
   </div>
 
   <main id="main">
     <div class="wrap">
       <div class="page-hero pm-hero">
         <div class="pm-hero-copy">
-          <span class="eyebrow">Handmade · small batch</span>
-          <h1>PawMatch.</h1>
-          <p>A handmade matching set for you and your dog — made one at a time, in colours you choose. And because every dog is different, PawMatch also finds the pieces that fit yours.</p>
+          <span class="eyebrow">PawMatch · adoption, matched</span>
+          <h1>Find the dog that fits your life.</h1>
+          <p>Four questions, real shelter dogs, and a shortlist ranked by how well each one fits your home and lifestyle. When one feels right, send an adoption request — and take the 30-day plan with you.</p>
           <div class="pm-hero-actions">
-            <a class="btn btn-primary" href="#quiz">Find your match</a>
-            <button class="btn btn-ghost" type="button" data-add="pawmatch" data-color="natural">Add PawMatch — $39</button>
+            <a class="btn btn-primary" href="#match-quiz">Take the quiz</a>
+            <a class="btn btn-ghost" href="#all-dogs">Browse dogs</a>
           </div>
           <div class="pm-meta">
-            <span><strong>Made by hand</strong> · one of one</span>
-            <span><strong>4 questions</strong> · 60-second quiz</span>
+            <span><strong>8 dogs</strong> waiting now</span>
+            <span><strong>4 questions</strong> · 60 seconds</span>
+            <span><strong>Free</strong> · no account</span>
           </div>
         </div>
         <div class="pm-art" aria-hidden="true">
           <svg viewBox="0 0 520 520" role="img">
             <circle cx="260" cy="260" r="230" fill="url(#pmCore)"/>
-            <circle cx="260" cy="260" r="230" fill="none" stroke="#14211a" stroke-opacity=".08"/>
-            <g fill="none" stroke="#9b6b8f" stroke-width="2" opacity=".35">
+            <circle cx="260" cy="260" r="230" fill="none" stroke="currentColor" stroke-opacity=".08"/>
+            <g fill="none" stroke="currentColor" stroke-width="2" opacity=".28">
               <circle cx="260" cy="260" r="188"/>
               <circle cx="260" cy="260" r="132"/>
             </g>
-            <path d="M260 388s-104-58-104-136a58 58 0 0 1 104-32 58 58 0 0 1 104 32c0 78-104 136-104 136Z" fill="#9b6b8f" opacity=".9"/>
+            <path d="M260 388s-104-58-104-136a58 58 0 0 1 104-32 58 58 0 0 1 104 32c0 78-104 136-104 136Z" fill="currentColor" opacity=".85"/>
             <path d="M260 388s-104-58-104-136a58 58 0 0 1 104-32 58 58 0 0 1 104 32c0 78-104 136-104 136Z" fill="none" stroke="#fffdf8" stroke-opacity=".25" stroke-width="2"/>
             <g fill="#f8f4ea">
               <ellipse cx="260" cy="312" rx="22" ry="17"/>
@@ -100,82 +106,205 @@
         </div>
       </div>
 
-      <section class="pm-quiz-section" id="quiz">
-        <div class="pm-quiz-head">
-          <span class="eyebrow">The PawMatch quiz</span>
-          <h2>Four questions. A shortlist that fits.</h2>
-          <p>Tell us about your dog and we'll pick the pieces that suit their size, age and favourite kind of work.</p>
-        </div>
-        <div class="pm-quiz" data-quiz>
+      <div class="pm-tabs" role="tablist" aria-label="PawMatch tools">
+        <button class="pm-tab is-active" type="button" role="tab" aria-selected="true" data-tab="match">Find a match</button>
+        <button class="pm-tab" type="button" role="tab" aria-selected="false" data-tab="checklist">30-day checklist</button>
+        <button class="pm-tab" type="button" role="tab" aria-selected="false" data-tab="shelter">Shelter toolkit</button>
+        <button class="pm-tab" type="button" role="tab" aria-selected="false" data-tab="mood">Mood reader</button>
+      </div>
+
+      <section class="pm-panel is-active" data-panel="match" role="tabpanel" aria-label="Find a match">
+        <div class="pm-quiz" id="match-quiz" data-quiz>
           <div class="quiz-progress" aria-hidden="true"><span data-quiz-progress></span></div>
           <div class="quiz-body" data-quiz-body aria-live="polite"></div>
         </div>
-      </section>
 
-      <section class="pm-product">
-        <div class="pm-product-art" aria-hidden="true">
-          <svg viewBox="0 0 360 360" role="img">
-            <circle cx="180" cy="180" r="160" fill="url(#pmCore)"/>
-            <path d="M180 268s-70-39-70-92a39 39 0 0 1 70-22 39 39 0 0 1 70 22c0 53-70 92-70 92Z" fill="#9b6b8f"/>
-            <g fill="#f8f4ea">
-              <ellipse cx="180" cy="216" rx="15" ry="11"/>
-              <circle cx="161" cy="198" r="7"/>
-              <circle cx="173" cy="190" r="7"/>
-              <circle cx="187" cy="190" r="7"/>
-              <circle cx="199" cy="198" r="7"/>
-            </g>
-          </svg>
-        </div>
-        <div class="pm-product-copy">
-          <span class="eyebrow">The handmade piece</span>
-          <h2>PawMatch</h2>
-          <div class="pm-price-row"><span class="pm-price">$39</span><span class="pm-price-note">Made to order · ships in 5–7 days</span></div>
-          <p>A matching set for you and your dog, cut and sewn by hand in small batches. Choose your colours, tell us your dog's size, and we make it one at a time. No two are the same.</p>
-          <ul class="pm-list">
-            <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5 10.5-11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>One piece for your dog, one for you</li>
-            <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5 10.5-11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Made by hand in small batches</li>
-            <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5 10.5-11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Colours chosen by you</li>
-            <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5 10.5-11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>60-night happiness trial</li>
-          </ul>
-          <button class="btn btn-primary btn-block" type="button" data-add="pawmatch" data-color="natural">Add PawMatch to cart — $39</button>
-        </div>
-      </section>
-
-      <section class="section pm-how">
-        <div class="section-head">
+        <div class="pm-section-head">
           <div>
-            <span class="eyebrow">How it works</span>
-            <h2>Matched in a minute.</h2>
+            <span class="eyebrow">All dogs</span>
+            <h2>Everyone waiting right now.</h2>
           </div>
-          <p class="lead" style="max-width:340px">No account, no email. Answer four questions and the shortlist appears — add what fits straight to your cart.</p>
+          <p class="lead">Match scores appear after the quiz. Every dog here is looking for a home today.</p>
         </div>
-        <div class="steps">
-          <div class="step">
-            <span class="step-num">01</span>
-            <h3>Tell us about your dog</h3>
-            <p>Size, age, the challenge you're solving and what they love most.</p>
+        <div class="dog-grid" id="all-dogs" data-dog-grid></div>
+
+        <div class="adopt-card" id="adopt">
+          <div class="adopt-copy">
+            <span class="eyebrow">Adoption request</span>
+            <h2>Ask about a dog.</h2>
+            <p>Tell the shelter a little about your home and we'll pass your request on. This is a demo — no details are stored.</p>
+            <ul class="pm-list">
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5 10.5-11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>One request per dog</li>
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5 10.5-11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Shelters reply within 48 hours</li>
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5 10.5-11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>No fee to enquire</li>
+            </ul>
           </div>
-          <div class="step">
-            <span class="step-num">02</span>
-            <h3>Get your shortlist</h3>
-            <p>We match your answers to the collection and show the three best fits.</p>
+          <form class="adopt-form" data-adopt-form novalidate>
+            <div class="field span-2">
+              <label for="adoptDog">Which dog?</label>
+              <select class="input" id="adoptDog" name="dog" data-dog-select required></select>
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label for="adoptName">Your name</label>
+                <input class="input" id="adoptName" name="name" type="text" autocomplete="name" placeholder="Alex Morgan" required>
+              </div>
+              <div class="field">
+                <label for="adoptEmail">Email</label>
+                <input class="input" id="adoptEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              </div>
+              <div class="field span-2">
+                <label for="adoptPhone">Phone <span class="field-hint">optional</span></label>
+                <input class="input" id="adoptPhone" name="phone" type="tel" autocomplete="tel" placeholder="For a quick call back">
+              </div>
+              <div class="field span-2">
+                <label for="adoptMessage">Tell us about your home</label>
+                <textarea class="input" id="adoptMessage" name="message" rows="4" placeholder="Who lives at home, how much time the dog would be alone, and what you're looking for." required></textarea>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit" data-adopt-submit>Send adoption request</button>
+            <p class="adopt-status" data-adopt-status role="status"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="pm-panel" data-panel="checklist" role="tabpanel" aria-label="30-day checklist">
+        <div class="pm-section-head">
+          <div>
+            <span class="eyebrow">The first month</span>
+            <h2>Your 30-day new owner checklist.</h2>
           </div>
-          <div class="step">
-            <span class="step-num">03</span>
-            <h3>Add your PawMatch</h3>
-            <p>Top it off with a handmade matching set, made to order in your colours.</p>
+          <p class="lead">A calm, week-by-week plan for the first month home. Tick things off as you go — it saves on this device.</p>
+        </div>
+        <div class="check-card">
+          <div class="check-top">
+            <div>
+              <span class="check-count" data-check-count>0 of 0 done</span>
+              <div class="ship-meter-bar"><span data-check-progress></span></div>
+            </div>
+            <button class="link-btn" type="button" data-check-reset>Reset</button>
           </div>
+          <div class="check-weeks" data-checklist></div>
+        </div>
+      </section>
+
+      <section class="pm-panel" data-panel="shelter" role="tabpanel" aria-label="Shelter toolkit">
+        <div class="pm-section-head">
+          <div>
+            <span class="eyebrow">For shelters</span>
+            <h2>Write a bio that gets a dog seen.</h2>
+          </div>
+          <p class="lead">Two tools: a bio writer for the profile, and a chart that shows which dogs have waited longest.</p>
+        </div>
+        <div class="tool-grid">
+          <div class="tool-card">
+            <h3>Shelter bio writer</h3>
+            <form data-bio-form>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="bioName">Dog's name</label>
+                  <input class="input" id="bioName" name="name" type="text" placeholder="Biscuit" required>
+                </div>
+                <div class="field">
+                  <label for="bioBreed">Breed</label>
+                  <input class="input" id="bioBreed" name="breed" type="text" placeholder="Beagle mix">
+                </div>
+                <div class="field">
+                  <label for="bioAge">Age</label>
+                  <input class="input" id="bioAge" name="age" type="text" placeholder="3 years">
+                </div>
+                <div class="field">
+                  <label for="bioHome">Best home</label>
+                  <input class="input" id="bioHome" name="home" type="text" placeholder="a house with a garden">
+                </div>
+                <div class="field span-2">
+                  <span class="option-label">Personality</span>
+                  <div class="chip-group" data-bio-traits>
+                    <label class="chip-check"><input type="checkbox" value="playful"><span>Playful</span></label>
+                    <label class="chip-check"><input type="checkbox" value="gentle"><span>Gentle</span></label>
+                    <label class="chip-check"><input type="checkbox" value="curious"><span>Curious</span></label>
+                    <label class="chip-check"><input type="checkbox" value="goofy"><span>Goofy</span></label>
+                    <label class="chip-check"><input type="checkbox" value="calm"><span>Calm</span></label>
+                    <label class="chip-check"><input type="checkbox" value="loyal"><span>Loyal</span></label>
+                    <label class="chip-check"><input type="checkbox" value="shy"><span>Shy</span></label>
+                    <label class="chip-check"><input type="checkbox" value="clever"><span>Clever</span></label>
+                  </div>
+                </div>
+                <div class="field span-2">
+                  <label for="bioQuirk">One lovely quirk</label>
+                  <input class="input" id="bioQuirk" name="quirk" type="text" placeholder="carries a toy to every meal">
+                </div>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit" style="margin-top:18px">Write the bio</button>
+            </form>
+            <div class="bio-output" data-bio-output aria-live="polite"></div>
+            <button class="link-btn" type="button" data-bio-copy hidden>Copy bio</button>
+          </div>
+
+          <div class="tool-card">
+            <h3>Overlooked dogs chart</h3>
+            <p class="tool-note">Days waiting in the shelter. Dogs over 60 days get a nudge in the match results.</p>
+            <div class="bar-chart" data-overlooked></div>
+            <div class="chart-legend">
+              <span><i class="dot dot-long"></i>60+ days</span>
+              <span><i class="dot dot-short"></i>Under 60 days</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pm-panel" data-panel="mood" role="tabpanel" aria-label="Mood reader">
+        <div class="pm-section-head">
+          <div>
+            <span class="eyebrow">Read the room</span>
+            <h2>Dog mood reader.</h2>
+          </div>
+          <p class="lead">Pick what you see — tail, ears and posture — and get a quick read on how your dog might be feeling.</p>
+        </div>
+        <div class="mood-card">
+          <form data-mood-form>
+            <div class="form-grid">
+              <div class="field">
+                <label for="moodTail">Tail</label>
+                <select class="input" id="moodTail" name="tail">
+                  <option value="loose">Wagging, loose and low</option>
+                  <option value="fast">High and fast</option>
+                  <option value="tucked">Tucked between the legs</option>
+                  <option value="stiff">Stiff and still</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="moodEars">Ears</label>
+                <select class="input" id="moodEars" name="ears">
+                  <option value="relaxed">Relaxed and soft</option>
+                  <option value="forward">Forward and alert</option>
+                  <option value="back">Pinned back</option>
+                </select>
+              </div>
+              <div class="field span-2">
+                <label for="moodPosture">Body</label>
+                <select class="input" id="moodPosture" name="posture">
+                  <option value="loose">Loose and wiggly</option>
+                  <option value="bow">Front down, bottom up (play bow)</option>
+                  <option value="cower">Cowering or shrinking</option>
+                  <option value="stiff">Stiff and tall</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit" style="margin-top:18px">Read the mood</button>
+          </form>
+          <div class="mood-result" data-mood-result aria-live="polite"></div>
         </div>
       </section>
 
       <section class="cta-band">
         <div class="wrap">
-          <span class="eyebrow" style="color:var(--sage)">One of one</span>
-          <h2>Made for your dog. Matched to you.</h2>
-          <p>Take the quiz, find the fit, and add a handmade PawMatch set while you're here.</p>
+          <span class="eyebrow" style="color:var(--sage)">Adopt, don't shop</span>
+          <h2>Somewhere, a dog is waiting for you.</h2>
+          <p>Take the quiz, meet your shortlist and send a request. The right home is worth the wait.</p>
           <div class="cta-actions">
-            <a class="btn btn-light" href="#quiz">Take the quiz</a>
-            <a class="btn btn-ghost" href="/shop.html" style="color:var(--cream);border-color:rgba(248,244,234,.4)">Shop all</a>
+            <a class="btn btn-light" href="#match-quiz">Take the quiz</a>
+            <a class="btn btn-ghost" href="/contact.html" style="color:var(--cream);border-color:rgba(248,244,234,.4)">Talk to us</a>
           </div>
         </div>
       </section>

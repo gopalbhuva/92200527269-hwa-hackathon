@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>try{var t=localStorage.getItem("rove_theme");if(t!=="dark"&&t!=="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -33,6 +34,10 @@
         <a href="/contact.html">Contact</a>
       </nav>
       <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+          <svg class="theme-icon theme-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <svg class="theme-icon theme-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </button>
         <a class="cart-link" href="/cart.html" aria-label="Shopping cart">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           <span class="cart-count" data-cart-count>0</span>
@@ -68,7 +73,7 @@
       <section class="shop-section" aria-label="All products">
         <div class="shop-head">
           <span class="eyebrow">Shop all</span>
-          <span class="shop-count">9 pieces · free shipping over $75</span>
+          <span class="shop-count">8 pieces · free shipping over $75</span>
         </div>
         <div class="shop-grid">
 
@@ -195,19 +200,19 @@
           </article>
 
           <article class="shop-card pawmatch-card reveal" data-delay="2">
-            <div class="shop-media" style="--accent:#9b6b8f">
-              <span class="shop-tag">Handmade</span>
+            <a class="shop-media" href="/pawmatch.html" style="--accent:#9b6b8f" aria-label="Open PawMatch adoption">
+              <span class="shop-tag">Adoption</span>
               <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M32 50s-16-9-16-21a9 9 0 0 1 16-5 9 9 0 0 1 16 5c0 12-16 21-16 21Z"/>
                 <circle cx="22" cy="15" r="3"/><circle cx="30" cy="11" r="3"/><circle cx="38" cy="11" r="3"/><circle cx="46" cy="15" r="3"/>
               </svg>
-            </div>
+            </a>
             <div class="shop-body">
-              <div class="shop-top"><h3>PawMatch</h3><span class="shop-price">$39</span></div>
-              <p class="shop-desc">A small-batch, handmade matching set for you and your dog — made one at a time, in your colours.</p>
+              <div class="shop-top"><h3>PawMatch</h3><span class="shop-price">Free</span></div>
+              <p class="shop-desc">Adoption, matched. A four-question quiz ranks shelter dogs by how well they fit your home and lifestyle.</p>
               <div class="shop-actions">
-                <button class="btn btn-ghost btn-block" type="button" data-add="pawmatch" data-color="natural">Add to cart</button>
-                <a class="link-arrow" href="/pawmatch.html">Take the match quiz <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <a class="btn btn-ghost btn-block" href="/pawmatch.html">Find your match</a>
+                <a class="link-arrow" href="/pawmatch.html">Open PawMatch <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
               </div>
             </div>
           </article>
@@ -239,7 +244,7 @@
       <section class="cta-band">
         <div class="wrap">
           <span class="eyebrow" style="color:var(--sage)">Not sure where to start?</span>
-          <h2>Let PawMatch choose for you.</h2>
+          <h2>Let PawMatch find your dog.</h2>
           <p>Four quick questions about your dog and we'll build a shortlist that actually fits.</p>
           <div class="cta-actions">
             <a class="btn btn-light" href="/pawmatch.html">Take the PawMatch quiz</a>
