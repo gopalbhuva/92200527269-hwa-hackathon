@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — ROVE</title>
+  <meta name="description" content="Talk to the ROVE team about The Orbit, orders, shipping, the 60-night trial or anything dog-related.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="announce">Free shipping over $75 <span>·</span> 60-night happiness trial <span>·</span> 2-year warranty</div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/index.html" aria-label="ROVE home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-word">ROVE</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/product.html">The Orbit</a>
+        <a href="/shop.html">Shop</a>
+        <a href="/pawmatch.html">PawMatch</a>
+        <a href="/index.html#reviews">Reviews</a>
+        <a href="/faqs.html">FAQs</a>
+        <a href="/contact.html" aria-current="page">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="cart-link" href="/cart.html" aria-label="Shopping cart">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </a>
+        <a class="btn btn-primary btn-sm header-cta" href="/shop.html">Shop now</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/product.html">The Orbit</a>
+    <a href="/shop.html">Shop all</a>
+    <a href="/pawmatch.html">PawMatch</a>
+    <a href="/index.html#reviews">Reviews</a>
+    <a href="/faqs.html">FAQs</a>
+    <a href="/contact.html">Contact</a>
+    <a class="btn btn-primary btn-block" href="/product.html">Shop the Orbit</a>
+  </div>
+
+  <main id="main">
+    <div class="wrap">
+      <div class="page-hero">
+        <span class="eyebrow">Contact</span>
+        <h1>Say hello.</h1>
+        <p>Questions about The Orbit, an order or the 60-night trial? Tell us what's on your mind — a real human will read it.</p>
+      </div>
+
+      <div class="contact-page">
+        <div class="contact-layout">
+          <div>
+            <span class="eyebrow">We're a small pack</span>
+            <h2 style="margin-bottom:16px">Real people. Real dogs.</h2>
+            <p class="lead">We reply within one business day, usually sooner. For order questions, include your order number and we'll jump straight in.</p>
+            <div class="contact-cards">
+              <div class="contact-card">
+                <span>Email</span>
+                <strong>hello@rove.dog</strong>
+                <p>Best for order changes, returns and everything else.</p>
+              </div>
+              <div class="contact-card">
+                <span>Studio hours</span>
+                <strong>Mon–Fri, 9am–5pm GMT</strong>
+                <p>Weekend messages get answered on Monday morning.</p>
+              </div>
+              <div class="contact-card">
+                <span>Order help</span>
+                <strong>Include your order number</strong>
+                <p>It starts with ROVE- and is on your confirmation page.</p>
+              </div>
+            </div>
+            <a class="link-arrow" href="/faqs.html" style="margin-top:26px">Browse the FAQs first <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+
+          <div>
+            <form class="contact-form" id="contact-form" novalidate>
+              <h2>Send us a note</h2>
+              <p>Fields marked with a label are required. No newsletters, no spam.</p>
+              <div class="form-error" data-contact-error role="alert"></div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="contactName">Your name</label>
+                  <input class="input" id="contactName" name="name" type="text" autocomplete="name" placeholder="Alex Morgan" required>
+                </div>
+                <div class="field">
+                  <label for="contactEmail">Email</label>
+                  <input class="input" id="contactEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                </div>
+                <div class="field span-2">
+                  <label for="contactTopic">What's it about?</label>
+                  <select class="input" id="contactTopic" name="topic" required>
+                    <option value="">Choose a topic</option>
+                    <option value="Product question">Product question</option>
+                    <option value="Order or delivery">Order or delivery</option>
+                    <option value="Returns and trial">Returns and trial</option>
+                    <option value="Warranty">Warranty</option>
+                    <option value="Wholesale">Wholesale</option>
+                    <option value="Something else">Something else</option>
+                  </select>
+                </div>
+                <div class="field span-2">
+                  <label for="contactOrder">Order number <span class="opt">(optional)</span></label>
+                  <input class="input" id="contactOrder" name="orderNumber" type="text" placeholder="ROVE-XXXXXX">
+                </div>
+                <div class="field span-2">
+                  <label for="contactMessage">Message</label>
+                  <textarea class="input" id="contactMessage" name="message" placeholder="Tell us what's going on — the more detail, the better." required></textarea>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit" data-contact-submit>Send message</button>
+              <p class="secure-note">We'll only use your details to reply to this message.</p>
+            </form>
+
+            <div class="success-panel" data-contact-success>
+              <span class="confirm-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l4.5 4.5 10.5-11" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <h2>Message received.</h2>
+              <p>Thanks, <span data-contact-name>friend</span>. Your message is with our team and we'll reply within one business day. Your reference is <strong data-contact-ticket>ROVE-C-000000</strong>.</p>
+              <a class="btn btn-ghost" href="/index.html">Back to home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-light" href="/index.html" aria-label="ROVE home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-word">ROVE</span>
+        </a>
+        <p>Enrichment, beautifully made. Designed in London for dogs who think and the people who love them.</p>
+        <p class="footer-note">Demo store · no real payments</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="/product.html">The Orbit</a>
+        <a href="/shop.html">Shop all</a>
+        <a href="/pawmatch.html">PawMatch</a>
+        <a href="/index.html#pricing">Bundles</a>
+        <a href="/index.html#reviews">Reviews</a>
+        <a href="/cart.html">Your cart</a>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <a href="/index.html#features">Features</a>
+        <a href="/index.html#how">How it works</a>
+        <a href="/faqs.html">FAQs</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="/faqs.html#shipping">Shipping &amp; returns</a>
+        <a href="/faqs.html#safety">Safety</a>
+        <a href="/faqs.html#orders">Orders</a>
+        <a href="/contact.html">Help centre</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 ROVE. All rights reserved.</span>
+      <span>Made for the love of dogs.</span>
+    </div>
+  </footer>
+
+  <div class="toast-stack" aria-live="polite"></div>
+
+  <script src="/js/store.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/contact.js" defer></script>
+</body>
+</html>

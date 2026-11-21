@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your cart — ROVE</title>
+  <meta name="description" content="Review your ROVE Orbit bundle, adjust quantities and continue to checkout.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="announce">Free shipping over $75 <span>·</span> 60-night happiness trial <span>·</span> 2-year warranty</div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/index.html" aria-label="ROVE home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-word">ROVE</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/product.html">The Orbit</a>
+        <a href="/shop.html">Shop</a>
+        <a href="/pawmatch.html">PawMatch</a>
+        <a href="/index.html#reviews">Reviews</a>
+        <a href="/faqs.html">FAQs</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="cart-link" href="/cart.html" aria-label="Shopping cart">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </a>
+        <a class="btn btn-primary btn-sm header-cta" href="/shop.html">Shop now</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/product.html">The Orbit</a>
+    <a href="/shop.html">Shop all</a>
+    <a href="/pawmatch.html">PawMatch</a>
+    <a href="/index.html#reviews">Reviews</a>
+    <a href="/faqs.html">FAQs</a>
+    <a href="/contact.html">Contact</a>
+    <a class="btn btn-primary btn-block" href="/product.html">Shop the Orbit</a>
+  </div>
+
+  <main id="main">
+    <div class="wrap cart-page">
+      <div class="page-hero" style="padding-top:0;border-bottom:0">
+        <span class="eyebrow">Your cart</span>
+        <h1>Good taste.</h1>
+        <p>Review your bundle, adjust the quantity and we'll get it on its way.</p>
+      </div>
+
+      <div class="empty-state" data-cart-empty hidden>
+        <span class="empty-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h2>Your cart is empty.</h2>
+        <p>Every good hunt starts with a fill. Meet The Orbit and give your dog a job.</p>
+        <a class="btn btn-primary" href="/product.html">Shop The Orbit — $89</a>
+      </div>
+
+      <div class="cart-layout" data-cart-layout>
+        <div>
+          <div class="cart-list" data-cart-list></div>
+          <a class="link-arrow" href="/product.html" style="margin-top:28px">Continue shopping <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <aside class="summary-card" aria-label="Order summary">
+          <h2>Order summary</h2>
+          <div class="ship-meter">
+            <div class="ship-meter-bar"><span data-ship-progress></span></div>
+            <p data-ship-message>Free shipping unlocked.</p>
+          </div>
+          <div class="summary-row"><span>Subtotal</span><strong data-subtotal>$0.00</strong></div>
+          <div class="summary-row"><span>Shipping</span><strong data-shipping>Free</strong></div>
+          <div class="summary-row"><span>Estimated tax (8%)</span><strong data-tax>$0.00</strong></div>
+          <div class="summary-total"><span>Total</span><strong data-total>$0.00</strong></div>
+          <a class="btn btn-primary btn-block" href="/checkout.html" data-checkout-btn>Continue to checkout</a>
+          <p class="secure-note"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.6"/></svg>Secure checkout · demo payment</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-light" href="/index.html" aria-label="ROVE home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-word">ROVE</span>
+        </a>
+        <p>Enrichment, beautifully made. Designed in London for dogs who think and the people who love them.</p>
+        <p class="footer-note">Demo store · no real payments</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="/product.html">The Orbit</a>
+        <a href="/shop.html">Shop all</a>
+        <a href="/pawmatch.html">PawMatch</a>
+        <a href="/index.html#pricing">Bundles</a>
+        <a href="/index.html#reviews">Reviews</a>
+        <a href="/cart.html">Your cart</a>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <a href="/index.html#features">Features</a>
+        <a href="/index.html#how">How it works</a>
+        <a href="/faqs.html">FAQs</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="/faqs.html#shipping">Shipping &amp; returns</a>
+        <a href="/faqs.html#safety">Safety</a>
+        <a href="/faqs.html#orders">Orders</a>
+        <a href="/contact.html">Help centre</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 ROVE. All rights reserved.</span>
+      <span>Made for the love of dogs.</span>
+    </div>
+  </footer>
+
+  <div class="toast-stack" aria-live="polite"></div>
+
+  <script src="/js/store.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/cart-page.js" defer></script>
+</body>
+</html>
